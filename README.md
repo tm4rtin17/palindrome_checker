@@ -24,7 +24,7 @@ This Python script allows users to check whether a given word is a palindrome. I
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/tm4rtin17/palindrome_checker
    ```
 2. Install the required library using pip:
    ```bash
