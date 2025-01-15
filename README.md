@@ -55,7 +55,3 @@ Feel free to fork this repository and submit pull requests if you'd like to enha
 
 ## License
 This project is licensed under the MIT License.
-
----
-
-Happy palindrome checking!
