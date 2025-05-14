@@ -1,4 +1,4 @@
-# Palindrome Checker v1.1
+# Pylindrome v1.1
 
 This Python script allows users to check whether a **word** or **sentence** contains **palindromes**. With enhanced interactivity and multi-word support, you can now analyze complete sentences and get a list of detected palindromes. 
 
