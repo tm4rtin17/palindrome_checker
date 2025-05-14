@@ -1,25 +1,54 @@
 import pyinputplus as pyip
 
+def count_words(text):
+    words = text.split()
+    return len(words)
+
 #Function definition to check if word is a palindrome
 def palin_check():
-    word = pyip.inputStr("Enter a word to see if it is a palindrome!") #User enters suspected palindrome
-    word_reversed = word[::-1] #string slicing reverses word
+    strng = pyip.inputStr("Enter a word or sentence to check for palindromes!") #User enters suspected palindrome
+    strng = strng.lower() #Adjust to lowercase to remove case sensitivity
+    word_count = count_words(strng)
 
-    #Word match logic; Prints Result
-    if word == word_reversed:
-        print(f"The word {word} is a palindrome!")
-    else:
-        print(f"The word {word} is not a palindrome.")
+    if word_count == 1:
+        word_reversed = strng[::-1] #string slicing reverses word & compares it
+        if strng == word_reversed:
+            print(f"The word {strng} is a palindrome!")
+        else:
+            print(f"The word {strng} is not a palindrome.")
+    elif word_count > 1: #Sentence Checker
+        word_list = strng.split()
+        pdromes = []
+
+        #Iterate over every word in the string to check for palindromes
+        for word in word_list:
+            word_reversed = word[::-1]
+            #store palindromes in their own list
+            if word == word_reversed:
+                pdromes.append(word)
+
+        #Get count of total palindromes and list them out    
+        pdrome_count = len(pdromes)
+        if pdrome_count == 1:
+            print('1 palindrome was detected!')
+            print(f'Palindrome: {pdromes[0]}')
+        elif pdrome_count > 1:
+            print(f'{pdrome_count} palindromes detected!')
+            print(f'Palindromes: ')
+            for word in pdromes:
+                print(word)
+        else:
+            print('No palindromes were detected...')
 
 #Initial Function Run
 palin_check()
 
 #Infinite loop allows for unlimited function re-runs if desired
 while True:
-    restart = pyip.inputYesNo("Would you like to check another word? (y/n): ")
+    restart = pyip.inputYesNo("Would you like to check another word or sentence? (y/n): ")
     if restart == "yes":
         palin_check()
     else:
-        print("Thanks for checking your palindromes with us! Come back soon!")
+        print("Thanks for checking your palindromes with us!")
         break
 
