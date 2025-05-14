@@ -55,7 +55,7 @@ Cleaner logic and user-friendly feedback
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/tm4rtin17/palindrome_checker
+   git clone https://github.com/tm4rtin17/Pylindrome
    ```
 
 2. Install the required library:
@@ -71,7 +71,7 @@ Cleaner logic and user-friendly feedback
 1. Run the script:
 
    ```bash
-   python palindrome_checker.py
+   python pylindrome.py
    ```
 
 2. Follow the on-screen prompts 🧾
