@@ -1,4 +1,5 @@
 import pyinputplus as pyip
+import string
 
 def count_words(text):
     words = text.split()
@@ -8,6 +9,7 @@ def count_words(text):
 def palin_check():
     strng = pyip.inputStr("Enter a word or sentence to check for palindromes!") #User enters suspected palindrome
     strng = strng.lower() #Adjust to lowercase to remove case sensitivity
+    strng = strng.strip(string.punctuation) #remove punctuation
     word_count = count_words(strng)
 
     if word_count == 1:

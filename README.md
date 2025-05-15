@@ -1,111 +1,62 @@
-# Pylindrome v1.1
+# 🌀 Pylindrome v1.1.01
 
-This Python script allows users to check whether a **word** or **sentence** contains **palindromes**. With enhanced interactivity and multi-word support, you can now analyze complete sentences and get a list of detected palindromes. 
-
----
-
-## What's New in v1.1
-
-Sentence support – analyze multiple words at once
-Case-insensitive comparisons
-Count and display of all detected palindromes
-Cleaner logic and user-friendly feedback
+**Pylindrome** is a Python script that checks whether a **word** or **sentence** contains **palindromes**. With enhanced sentence analysis, cleaner logic, and replay support, it's a fun tool to explore word symmetry in real time.
 
 ---
 
-## Features
+## 🆕 What's New in v1.1.01
 
-* Verifies if a **single word** is a palindrome
-* Detects **multiple palindromes** in a **sentence**
-* Displays total count and the list of detected palindromes
-* Interactive input with validation via the `pyinputplus` library
-* Option to run multiple checks in a single session
+* 🩹 Version bump for internal improvements
+* 🔤 Fine-tuned punctuation handling
+* 🧼 Code formatting and readability enhancements
+* 📄 Minor docstring/print message cleanup
 
 ---
 
-## How It Works
+## ✨ Features
+
+* 🧪 Checks if a **single word** is a palindrome
+* 🔍 Analyzes **each word** in a **sentence** for palindromes
+* 📊 Displays a **count** and **list** of all detected palindromes
+* 🔄 Offers continuous input until the user opts out
+* 🔐 Uses `pyinputplus` for validated, user-safe input
+
+---
+
+## ⚙️ How It Works
 
 1. **Input**
-   The user enters either a word or a full sentence.
+   Enter a single word or an entire sentence.
 
 2. **Processing**
 
-   * If one word is entered, the script checks if it reads the same forwards and backwards.
-   * If a sentence is entered, the script evaluates each word independently.
+   * If one word is entered, it's checked for being a palindrome.
+   * If multiple words are entered, **each word** is checked individually.
+   * The check is case-insensitive and ignores leading/trailing punctuation.
 
 3. **Output**
 
-   * A message indicates whether the word is a palindrome.
-   * For sentences, the number of palindromes is shown along with the list.
+   * Clear feedback on whether the word is a palindrome.
+   * For sentences: a **count** and **list** of palindromes found.
 
-4. **Repeat Option**
-   After each run, the user can choose to check another word or sentence.
+4. **Repeat**
 
----
-
-## Requirements
-
-* Python 3.13.1
-* `pyinputplus` library
+   * You're prompted after each run to check another word/sentence.
 
 ---
 
-## Installation
+## 🧰 Requirements
 
-1. Clone this repository:
+* Python ≥ 3.6 (tested on 3.13.1)
+* [`pyinputplus`](https://pypi.org/project/PyInputPlus/)
+
+---
+
+## 🚀 Installation
+
+1. Clone the repo:
 
    ```bash
    git clone https://github.com/tm4rtin17/Pylindrome
+   cd Pylindrome
    ```
-
-2. Install the required library:
-
-   ```bash
-   pip install pyinputplus
-   ```
-
----
-
-## Usage
-
-1. Run the script:
-
-   ```bash
-   python pylindrome.py
-   ```
-
-2. Follow the on-screen prompts 🧾
-
-3. Type `n` when asked if you'd like to check another input to exit 🚪
-
----
-
-## Example Interactions
-
-```plaintext
-Enter a word or sentence to check for palindromes!: radar
-The word radar is a palindrome!
-Would you like to check another word or sentence? (y/n): y
-Enter a word or sentence to check for palindromes!: My mom and dad went to the mall
-2 palindromes detected!
-Palindromes:
-mom
-dad
-Would you like to check another word or sentence? (y/n): n
-Thanks for checking your palindromes with us!
-```
-
----
-
-## Contributing
-
-Fork this repo and submit a pull request!
-Suggestions for punctuation handling, UI improvements, or full sentence palindrome logic are welcome!
-
----
-
-## License
-
-This project is licensed under the MIT License 📜
-
----
