@@ -1,62 +1,65 @@
-# 🌀 Pylindrome v1.1.01
+# 🌀 Pylindrome v1.2.0
 
-**Pylindrome** is a Python script that checks whether a **word** or **sentence** contains **palindromes**. With enhanced sentence analysis, cleaner logic, and replay support, it's a fun tool to explore word symmetry in real time.
+**Pylindrome** is a Python script that checks whether a **word** or **sentence** contains **palindromes**. With clean separation between word and sentence analysis, this version improves clarity, flexibility, and reusability.
 
 ---
 
-## 🆕 What's New in v1.1.01
+## 🆕 What's New in v1.2.0
 
-* 🩹 Version bump for internal improvements
-* 🔤 Fine-tuned punctuation handling
-* 🧼 Code formatting and readability enhancements
-* 📄 Minor docstring/print message cleanup
+- ✅ Separated logic into dedicated functions: `word_check()` and `sentence_check()`
+- 🎯 Cleaner input prompts for word vs sentence detection
+- 🧼 Streamlined output formatting with clearer messages
+- 🪝 Main menu for choosing between word or sentence check
+- 🔁 Infinite loop restructured for better readability and flow
 
 ---
 
 ## ✨ Features
 
-* 🧪 Checks if a **single word** is a palindrome
-* 🔍 Analyzes **each word** in a **sentence** for palindromes
-* 📊 Displays a **count** and **list** of all detected palindromes
-* 🔄 Offers continuous input until the user opts out
-* 🔐 Uses `pyinputplus` for validated, user-safe input
+- 🧪 Checks if a **single word** is a palindrome  
+- 📚 Detects and lists all **palindromes in a sentence**
+- 📊 Displays **total count** and a formatted **list**
+- 🧠 Case-insensitive comparisons
+- 🧹 Filters out punctuation at the edges
+- 🔁 Menu-based reruns for continuous input
+- 🔐 Input safety via `pyinputplus` validation
 
 ---
 
 ## ⚙️ How It Works
 
-1. **Input**
-   Enter a single word or an entire sentence.
+1. **Startup**  
+   You're prompted to choose between checking a single word or a sentence.
 
-2. **Processing**
+2. **Input**
+   - Word: A single term is tested.
+   - Sentence: Each word in the sentence is evaluated.
 
-   * If one word is entered, it's checked for being a palindrome.
-   * If multiple words are entered, **each word** is checked individually.
-   * The check is case-insensitive and ignores leading/trailing punctuation.
+3. **Processing**
+   - Reverses each word to compare it.
+   - Ignores case differences.
+   - Filters out surrounding punctuation from sentences.
 
-3. **Output**
+4. **Output**
+   - Displays whether the input is a palindrome (for words).
+   - Shows the count and list of palindromes (for sentences).
 
-   * Clear feedback on whether the word is a palindrome.
-   * For sentences: a **count** and **list** of palindromes found.
-
-4. **Repeat**
-
-   * You're prompted after each run to check another word/sentence.
+5. **Repeat**
+   - You're prompted after each check if you'd like to try again.
 
 ---
 
 ## 🧰 Requirements
 
-* Python ≥ 3.6 (tested on 3.13.1)
-* [`pyinputplus`](https://pypi.org/project/PyInputPlus/)
+- Python ≥ 3.6 (tested on 3.13.1)
+- [`pyinputplus`](https://pypi.org/project/PyInputPlus/)
 
 ---
 
 ## 🚀 Installation
 
-1. Clone the repo:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/tm4rtin17/Pylindrome
    cd Pylindrome
-   ```
