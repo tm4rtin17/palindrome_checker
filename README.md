@@ -1,65 +1,83 @@
-# Pylindrome v1.2.0
+# Pylindrome v1.3.0
 
-**Pylindrome** is a Python script that checks whether a **word** or **sentence** contains **palindromes**. With clean separation between word and sentence analysis, this version improves clarity, flexibility, and reusability.
+**Pylindrome** is a lightweight command-line tool that checks for palindromes in either a single word or an entire sentence. Now powered by `typer`, the tool features a modern, user-friendly CLI with improved structure, clarity, and error handling.
 
 ---
 
-## What's New in v1.2.0
+## What's New in v1.3.0
 
-- Separated logic into dedicated functions: `word_check()` and `sentence_check()`
-- Cleaner input prompts for word vs sentence detection
-- Streamlined output formatting with clearer messages
-- Main menu for choosing between word or sentence check
-- Infinite loop restructured for better readability and flow
+- Migrated to a command-line interface using `typer`
+- Commands split into `word` and `sentence` for precise usage
+- Better error handling for empty input
+- Punctuation handling for sentence analysis
+- Improved output formatting based on palindrome count
 
 ---
 
 ## Features
 
 - Checks if a **single word** is a palindrome  
-- Detects and lists all **palindromes in a sentence**
-- Displays **total count** and a formatted **list**
-- Case-insensitive comparisons
-- Filters out punctuation at the edges
-- Menu-based reruns for continuous input
-- Input safety via `pyinputplus` validation
+- Scans a **sentence** and identifies each word that is a palindrome  
+- Displays a **count** and a **list** of detected palindromes  
+- Case-insensitive comparison  
+- Strips punctuation at the beginning and end of sentences  
+- Clean CLI design using `typer`  
 
 ---
 
-## How It Works
+## How to Use
 
-1. **Startup**  
-   You're prompted to choose between checking a single word or a sentence.
+### Check a Word
+```bash
+python pylindrome.py word racecar
+```
+**Output:**
+```
+The word "racecar" is a palindrome!
+```
 
-2. **Input**
-   - Word: A single term is tested.
-   - Sentence: Each word in the sentence is evaluated.
-
-3. **Processing**
-   - Reverses each word to compare it.
-   - Ignores case differences.
-   - Filters out surrounding punctuation from sentences.
-
-4. **Output**
-   - Displays whether the input is a palindrome (for words).
-   - Shows the count and list of palindromes (for sentences).
-
-5. **Repeat**
-   - You're prompted after each check if you'd like to try again.
+### Check a Sentence
+```bash
+python pylindrome.py sentence "Madam Arora teaches malayalam"
+```
+**Output:**
+```
+3 palindromes detected!
+- madam
+- arora
+- malayalam
+```
 
 ---
 
 ## Requirements
 
-- Python ≥ 3.6 (tested on 3.13.1)
-- [`pyinputplus`](https://pypi.org/project/PyInputPlus/)
+- Python ≥ 3.6  
+- [`typer`](https://pypi.org/project/typer/)
+
+Install the requirement with:
+```bash
+pip install typer[all]
+```
 
 ---
 
 ## Installation
 
 1. Clone the repository:
+```bash
+git clone https://github.com/tm4rtin17/Pylindrome
+cd Pylindrome
+```
 
-   ```bash
-   git clone https://github.com/tm4rtin17/Pylindrome
-   cd Pylindrome
+2. Run the script using the desired command:
+```bash
+python pylindrome.py word radar
+python pylindrome.py sentence "Wow Anna went to civic center"
+```
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
